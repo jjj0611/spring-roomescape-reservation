@@ -1,5 +1,7 @@
-package nextstep.domain;
+package nextstep.infra;
 
+import nextstep.domain.Reservation;
+import nextstep.domain.ReservationTime;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

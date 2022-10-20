@@ -2,7 +2,7 @@ package nextstep;
 
 import nextstep.domain.Reservation;
 import nextstep.domain.ReservationTime;
-import nextstep.domain.Reservations;
+import nextstep.infra.Reservations;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.jdbc.core.JdbcTemplate;
 

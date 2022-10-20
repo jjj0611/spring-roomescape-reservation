@@ -1,26 +1,22 @@
-plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.7.4'
-    id "io.spring.dependency-management" version "1.0.14.RELEASE"
-}
-
 group 'nextstep'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
+def allProjects = subprojects.findAll()
 
-test {
-    useJUnitPlatform()
-}
+configure(allProjects) {
+    apply plugin: 'java'
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    repositories {
+        mavenCentral()
+    }
 
-    runtimeOnly 'com.h2database:h2'
+    test {
+        useJUnitPlatform()
+    }
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
-    testImplementation 'org.assertj:assertj-core:3.15.0'
+    dependencies {
+        testImplementation 'org.assertj:assertj-core:3.15.0'
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
 }

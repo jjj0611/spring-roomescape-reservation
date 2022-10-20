@@ -2,7 +2,7 @@ package nextstep.api;
 
 import nextstep.domain.Reservation;
 import nextstep.domain.ReservationTime;
-import nextstep.domain.Reservations;
+import nextstep.infra.Reservations;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
